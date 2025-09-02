@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(23, 24, 24) 0.1%, rgb(53, 146, 171) 94.2%);
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.file-upload {
+    text-align: center;
+}
+
+.file-upload-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload-btn:hover{
+    background-color: #0056b3;
+}
+
+.image-upload-wrap {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.drag-text {
+    margin-top: 10px;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+.file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+.remove-image {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-image:hover {
+    background-color: #c82333;
+}
+
+.file-convert {
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; 
+    max-width: 450px;
+    max-height: 60%; 
+    overflow: auto;
+    background-color:white;
+    animation: zoomIn 5s ease forwards;
+}

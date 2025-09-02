@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>click</title>
+     <script src="{{ url_for('serve_static', filename='script/op.js') }}"></script>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='css/pk.css') }}">
+</head>
+<!-- page 2 -->
+<body>
+  <form id="loginForm" action="/login" method="POST"> <!-- Added form element -->
+    <div class="container">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <h2><i class="fa-user"></i> Log In</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button " id="loginButton" type="button" style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%); font-size: 24px; margin-top: 0px;" class='glowing-btn'><span class='glowing-txt'>C<span class='faulty-letter'>L</span>ICK</span></button>
+        </div>
+    </div>
+</form>
+ 
+<script>
+  document.getElementById('loginButton').addEventListener('click', function() {
+      var email = document.getElementById('email').value.trim();
+      var password = document.getElementById('password').value.trim();
+      if (email === '') {
+          alert('Please enter your email');
+          return;
+      }
+      if (password === '') {
+          alert('Please enter your password');
+          return;
+      }
+
+      // If validation passes, submit the form
+      document.getElementById('loginForm').submit();
+      window.location.href = 'main.html';
+  });
+</script>
+</body>
+</html>
